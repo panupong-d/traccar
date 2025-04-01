@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="${colorPrimary}" />
+    <meta name="description" content="${description}" />
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      href="/apple-touch-icon-180x180.png"
+      sizes="180x180"
+    />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>PanuTracking</title>
+    <style>
+      .loader {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 60px;
+        aspect-ratio: 1;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 6px solid transparent;
+        border-top-color: #8044f0;
+        border-bottom-color: #23005a;
+        animation: spin 1s linear infinite;
+      }
+
+      .loader::before {
+        content: "";
+        position: absolute;
+        inset: 5px;
+        border-radius: 50%;
+        border: 6px solid transparent;
+        border-left-color: #8044f0;
+        border-right-color: #23005a;
+        animation: spin-reverse 1.5s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      @keyframes spin-reverse {
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript
+      >Enable JavaScript to use
+      <a href="https://www.traccar.org/">Traccar GPS Tracking System</a
+      >.</noscript
+    >
+    <div id="root" class="root"></div>
+    <div class="loader"></div>
+    <script
+      type="module"
+      src="/src/index.jsx"
+      onerror="alert('Loading error.')"
+    ></script>
+  </body>
+</html>
