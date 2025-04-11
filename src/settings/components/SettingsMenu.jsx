@@ -40,7 +40,7 @@ const SettingsMenu = () => {
     <>
       <List>
         <MenuItem
-          title={t('sharedPreferences')}
+          title={t('sharedTest')}
           link="/settings/preferences"
           icon={<SettingsIcon />}
           selected={location.pathname === '/settings/preferences'}
@@ -129,6 +129,9 @@ const SettingsMenu = () => {
           </>
         )}
       </List>
+
+
+      
       {manager && (
         <>
           <Divider />
