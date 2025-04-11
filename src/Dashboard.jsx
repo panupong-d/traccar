@@ -290,10 +290,10 @@ const DashboardPage = () => {
             {/* Main Content */}
             <Box sx={{ flexGrow: 1, p: 3, mt: "64px", overflowY: "auto" }}>
                 <Grid container spacing={3}>
-
+               
                     <Grid item xs={12}>
                         <Grid container spacing={3} justifyContent="center" sx={{ display: 'flex' }}>
-
+                
                             <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
                                     <ListItemIcon sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'success.main', mb: 1 }}>
@@ -303,12 +303,12 @@ const DashboardPage = () => {
                                         {dashboardData.devices.length}
                                     </Typography>
                                     <Typography variant="subtitle1" color="textSecondary" align="center">
-                                        จำนวนรถอุปกรณ์
+                                        จำนวนอุปกรณ์ทั้งหมด
                                     </Typography>
                                 </Paper>
                             </Grid>
 
-
+                            {/* สถานะออนไลน์/ออฟไลน์ */}
                             <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
                                     <Typography variant="h6" gutterBottom align="center">
@@ -342,7 +342,7 @@ const DashboardPage = () => {
                                 </Paper>
                             </Grid>
 
- 
+                   
                             <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
                                     <ListItemIcon sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'primary.main', mb: 1 }}>
@@ -391,4 +391,4 @@ const DashboardPage = () => {
     );
 };
 
-export default  Page;
+export default DashboardPage;
