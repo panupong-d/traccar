@@ -224,7 +224,7 @@ const DashboardPage = () => {
 
         fetchUserData();
         fetchDashboardData(true);
-        const intervalId = setInterval(() => fetchDashboardData(false), 10000);
+        const intervalId = setInterval(() => fetchDashboardData(false), 5000);
         return () => clearInterval(intervalId);
     }, []);
 
