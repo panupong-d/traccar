@@ -119,6 +119,7 @@ const Navigation = () => {
       <Route path="/reset-password" element={<ResetPasswordPage />} />
       <Route path="/change-server" element={<ChangeServerPage />} />
       <Route path="/" element={<App />}>
+      
         <Route index element={<MainPage />} />
 
         {/* <Route path="/demo" element={<Demo />} /> */}
