@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import TestPage from "./TestPage";
-import DashboardPage from "./Dashboard";
+import DashboardPage from "./dashboard/Dashboard";
 import MainPage from "./main/MainPage";
 import CombinedReportPage from "./reports/CombinedReportPage";
 import RouteReportPage from "./reports/RouteReportPage";
@@ -48,8 +48,6 @@ import CommandDevicePage from "./settings/CommandDevicePage";
 import CommandGroupPage from "./settings/CommandGroupPage";
 import App from "./App";
 // import Demo from "./Demo";
-
-
 
 import ChangeServerPage from "./login/ChangeServerPage";
 import DevicesPage from "./settings/DevicesPage";
@@ -119,12 +117,11 @@ const Navigation = () => {
       <Route path="/reset-password" element={<ResetPasswordPage />} />
       <Route path="/change-server" element={<ChangeServerPage />} />
       <Route path="/" element={<App />}>
-      
         <Route index element={<MainPage />} />
 
         {/* <Route path="/demo" element={<Demo />} /> */}
         <Route path="/test" element={<TestPage />} />
-        <Route path="/dashboard" element={<DashboardPage/>} />
+        <Route path="/dashboard" element={<DashboardPage />} />
 
         <Route path="position/:id" element={<PositionPage />} />
         <Route path="network/:positionId" element={<NetworkPage />} />
